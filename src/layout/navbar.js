@@ -13,7 +13,9 @@ export default function
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
+                        
                     </button>
+                    <button className="btn btn-outline-light">Add Booking</button>
 
                 </div>
             </nav>
