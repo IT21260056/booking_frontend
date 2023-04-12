@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function
 
@@ -15,7 +16,7 @@ export default function
                         <span class="navbar-toggler-icon"></span>
                         
                     </button>
-                    <button className="btn btn-outline-light">Add Booking</button>
+                    <Link className="btn btn-outline-light" to="/user_booking">AddBooking</Link>
 
                 </div>
             </nav>
