@@ -54,13 +54,50 @@ export default function AddBooking() {
                         name="inDate"/>
                 </div>
 
+                <div className="mb-3">
+                    <label htmlFor="CheckOutDate" className="form-label">
+                        Check Out date
+                    </label>
+
+                    <input
+                        type={"date"}
+                        className="form-control"
+                        placeholder="Check out date"
+                        name="outDate"/>
+                </div>
+
 
                 <div className="mb-3">
+                    <label htmlFor="type" className="form-label">
+                    Room type
+                </label>
                     <select value={selectedOption} onChange={handleOptionChange}>
                         <option value="option1">Luxury</option>
                         <option value="option2">AC</option>
                         <option value="option3">Non-AC</option>
                     </select>
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="No of adults" className="form-label">
+                        Number of Adults
+                    </label>
+                    <input
+                        type={"number"}
+                        className="form-control"
+                        placeholder="Number of person"
+                        name="noOfPerson"/>
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="No of rooms" className="form-label">
+                        Number of Rooms
+                    </label>
+                    <input
+                        type={"number"}
+                        className="form-control"
+                        placeholder="Number of rooms"
+                        name="noOfRooms"/>
                 </div>
 
 
