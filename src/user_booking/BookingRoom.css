@@ -1,27 +1,27 @@
 
-.body1{
+.body1 {
     background: url(images/room1_backgropund.jpg);
     background-size: 100%;
     height: fit-content;
     width: fit-content;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     padding-top: 1%;
     padding-bottom: 1.5%;
     padding-left: 2%;
     padding-right: 0%;
     opacity: 0.8;
 
-    
+
 }
 
-.welcome{
-  
+.welcome {
+
     font-size: 90px;
-    color:white;
-    text-shadow: 4px 4px  rgb(0, 0, 0);
+    color: white;
+    text-shadow: 4px 4px rgb(0, 0, 0);
     font-family: "Brush Script MT", Times, serif;
-    
+
 }
 
 .rectangle {
@@ -31,30 +31,33 @@
     padding-left: 0.5%;
     padding-right: 0.5%;
     padding-top: 0.7%;
-    padding-bottom: 0.7%; 
+    padding-bottom: 0.7%;
     align-items: center;
     border-radius: 10px;
-    background:#000000;
+    background: #000000;
     opacity: 0.8;
-  
-  }
 
-  .text{
-    color:rgb(255, 255, 255);
-  }
+}
 
-  .body2{
+.text {
+    color: rgb(255, 255, 255);
+}
+
+.body2 {
     background: url(images/room2_background.jpg);
     background-size: 100%;
     height: fit-content;
-    
+
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     padding-top: 40%;
     padding-bottom: 1.5%;
     padding-left: 2%;
     padding-right: 0%;
     /* opacity:0.5; */
-  }
+}
+
+
+
 
   
