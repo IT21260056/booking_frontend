@@ -1,15 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './BookingRoom.css';
 
 
 export default function AddBookingRoom() {
 
+    const[user,setUser]=useState({
+        name:"",
+        checkInDate:"",
+        checkOutDate:"",
+        type:"",
+        noOfPerson:"",
+        noOfRooms:"",
 
-    let selectedOption;
+    })
 
-    function handleOptionChange() {
+    const{name,checkInDate,checkOutDate,type,noOfPerson,noOfRooms}=user
+
+    const onInputChange=(e)=>{
+        setUser({...user,[e.target.name]:e.target.value})
 
     }
+
+    const onSubmit=(e)=>{
+
+    }
+
+    // let selectedOption;
+
+    // function handleOptionChange() {
+    //
+    // }
 
     return <div className="container/fluid">
         {/*<div className="row">*/}
@@ -29,7 +49,11 @@ export default function AddBookingRoom() {
         <div className="body2">
 
             <div className="container1">
+
             <div className="rec2">
+
+
+                <form></form>
                 <div className="mb-3">
                     <label htmlFor="Name" className="form-label">
                         Name
@@ -38,7 +62,10 @@ export default function AddBookingRoom() {
                         type={"text"}
                         className="form-control"
                         placeholder="Your name"
-                        name="name"/>
+                        name="name"
+                        value={name}
+                        onChange={(e)=>onInputChange(e)}
+                    />
                 </div>
 
 
@@ -50,20 +77,28 @@ export default function AddBookingRoom() {
                     <input
                         type={"date"}
                         className="form-control"
-                        placeholder="Check in date"
-                        name="inDate"/>
+                        // placeholder="Check in date"
+                        name="CheckInDate"
+                        // value={checkInDate}
+                        onChange={(e)=>onInputChange(e)}
+                    />
                 </div>
 
+
+
                 <div className="mb-3">
-                    <label htmlFor="CheckOutDate" className="form-label">
+                    <label htmlFor="checkOutDate" className="form-label">
                         Check Out date
                     </label>
 
                     <input
                         type={"date"}
                         className="form-control"
-                        placeholder="Check out date"
-                        name="outDate"/>
+                        // placeholder="Check out date"
+                        name="outDate"
+                        // value={checkOutDate}
+                        onChange={(e)=>onInputChange(e)}
+                    />
                 </div>
 
 
@@ -71,10 +106,12 @@ export default function AddBookingRoom() {
                     <label htmlFor="type" className="form-label">
                     Room type
                 </label>
-                    <select value={selectedOption} onChange={handleOptionChange}>
-                        <option value="option1">Luxury</option>
-                        <option value="option2">AC</option>
-                        <option value="option3">Non-AC</option>
+                    <select value={type} onChange={(e)=>onInputChange(e)} >
+                        <option value="type">Luxury</option>
+                        <option value="type">AC</option>
+                        <option value="type">Non-AC</option>
+
+
                     </select>
                 </div>
 
@@ -86,7 +123,10 @@ export default function AddBookingRoom() {
                         type={"number"}
                         className="form-control"
                         placeholder="Number of person"
-                        name="noOfPerson"/>
+                        name="noOfPerson"
+                        value={noOfPerson}
+                        onChange={(e)=>onInputChange(e)}
+                    />
                 </div>
 
                 <div className="mb-3">
@@ -97,14 +137,17 @@ export default function AddBookingRoom() {
                         type={"number"}
                         className="form-control"
                         placeholder="Number of rooms"
-                        name="noOfRooms"/>
+                        name="noOfRooms"
+                        value={noOfRooms}
+                        onChange={(e)=>onInputChange(e)}
+                    />
                 </div>
 
 
         </div>
                 <div className="btn1">
                     <button type="submit" className="btn btn-dark btn-outline-primary">View room details</button>
-                    <button type="submit" className="btn btn-dark btn-outline-success ">Go to order page</button>
+                    <button type="submit" className="btn btn-dark btn-outline-success">Go to order page</button>
 
 
                 </div>
