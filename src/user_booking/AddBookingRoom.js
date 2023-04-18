@@ -28,7 +28,7 @@ export default function AddBookingRoom() {
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.post("http://127.0.0.1:8080/user", user)
-        navigate("/")
+        navigate("")
 
     };
 
@@ -37,6 +37,7 @@ export default function AddBookingRoom() {
     // function handleOptionChange() {
     //
     // }
+
 
     return <div className="container/fluid">
         {/*<div className="row">*/}
