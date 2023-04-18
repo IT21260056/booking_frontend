@@ -2,7 +2,7 @@ import React from 'react'
 import './BookingRoom.css';
 
 
-export default function AddBooking() {
+export default function AddBookingRoom() {
 
 
     let selectedOption;
@@ -102,9 +102,15 @@ export default function AddBooking() {
 
 
         </div>
-        </div>
+                <div className="btn1">
+                    <button type="submit" className="btn btn-dark btn-outline-primary">View room details</button>
+                    <button type="submit" className="btn btn-dark btn-outline-success ">Go to order page</button>
 
 
+                </div>
+
+
+    </div>
     </div>
     </div>
 }
