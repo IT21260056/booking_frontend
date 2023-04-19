@@ -10,9 +10,9 @@ export default function
             <div class="navbar navbar-expand-lg navbar-dark bg">
 
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="https://www.youtube.com/">
+                    <Link class="navbar-brand" to="/">
                         FRESCO
-                    </a>
+                    </Link>
                     <div className="nav-contain">
 
                         <a className="navbar-brand" href="https://www.youtube.com/">
