@@ -27,7 +27,7 @@ export default function AddBookingRoom() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://127.0.0.1:8080/user", user)
+        await axios.post("http://localhost:8080/user", user)
         navigate("")
 
     };
@@ -152,7 +152,8 @@ export default function AddBookingRoom() {
 
                 <div className="btn1">
 
-                    <Link className="btn btn-dark btn-outline-primary" to="/">View room details</Link>
+
+                    <Link className="btn btn-dark btn-outline-primary" to="/edituser">View room details</Link>
                     <button type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
 
                 </div>
