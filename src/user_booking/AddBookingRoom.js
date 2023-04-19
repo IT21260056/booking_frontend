@@ -39,7 +39,8 @@ export default function AddBookingRoom() {
     // }
 
 
-    return <div className="container/fluid">
+    return(
+        <div className="container/fluid">
         {/*<div className="row">*/}
         <div className="body1">
 
@@ -153,8 +154,8 @@ export default function AddBookingRoom() {
                 <div className="btn1">
 
 
-                    <Link className="btn btn-dark btn-outline-primary" to="/edituser">View room details</Link>
-                    <button type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
+                    <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/edituser">View room details</Link>
+                    <button id="button-2" type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
 
                 </div>
             </form>
@@ -164,5 +165,17 @@ export default function AddBookingRoom() {
 
         </div>
     </div>
+
+            <div id="footer-row-1">
+                footer1
+            </div>
+
+            <div id="footer-row-2">
+                footer2
+            </div>
+
+
+
 </div>
+)
 }
