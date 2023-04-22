@@ -41,8 +41,6 @@ export default function AddBookingRoom() {
 
     return(
         <div className="container/fluid">
-        {/*<div className="row">*/}
-        {/*    <img src="assert/images/room1_backgropund.jpg"/>*/}
 
         <div className="body1" >
 
@@ -59,9 +57,17 @@ export default function AddBookingRoom() {
 
         <div className="body2">
 
-            <button id="button-room" type="Submit" className="btn btn-dark btn-outline-primary" to="/">Room</button>
-            <button id="button-hall" type="Submit" className="btn btn-dark btn-outline-primary" to="">Hall</button>
+            <Link id="button-room" type="Submit" className="btn btn-dark btn-outline-primary" to="/">Room</Link>
+            <Link id="button-hall" type="Submit" className="btn btn-dark btn-outline-primary" to="/addhall">Hall</Link>
 
+            <h2>Available Rooms</h2>
+
+            {/*<div className="container-des">*/}
+            {/*    <div className="rec-r-1"></div>*/}
+            {/*    <div className="rec-r-1"></div>*/}
+            {/*    <div className="rec-r-1"></div>*/}
+
+            {/*</div>*/}
 
 
             <div className="container1">
