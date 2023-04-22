@@ -72,7 +72,7 @@ export default function AddBookingRoom() {
                         <form onSubmit={(e) => onSubmit(e)}>
                             <div className="mb-3">
                                 <label htmlFor="Name" className="form-label">
-                                    Name
+                                    Customer Name
                                 </label>
                                 <input
                                     type={"text"}
@@ -87,14 +87,13 @@ export default function AddBookingRoom() {
 
                             <div className="mb-3">
                                 <label htmlFor="CheckInDate" className="form-label">
-                                    Check In date
+                                    Date & Time Required
                                 </label>
 
                                 <input
-                                    type={"date"}
+                                    type={"datetime-local"}
                                     className="form-control"
-                                    // placeholder="Check in date"
-                                    name="checkInDate"
+                                    name="dateTime"
                                     // value={checkInDate}
                                     onChange={(e) => onInputChange(e)}
                                 />
@@ -102,29 +101,14 @@ export default function AddBookingRoom() {
 
 
                             <div className="mb-3">
-                                <label htmlFor="checkOutDate" className="form-label">
-                                    Check Out date
-                                </label>
-
-                                <input
-                                    type={"date"}
-                                    className="form-control"
-                                    // placeholder="Check out date"
-                                    name="checkOutDate"
-                                    value={checkOutDate}
-                                    onChange={(e) => onInputChange(e)}
-                                />
-                            </div>
-
-
-                            <div className="mb-3">
                                 <label htmlFor="type" className="form-label">
-                                    Room type
+                                    Hall type
                                 </label>
                                 <select name="type" onChange={(e) => onInputChange(e)}>
-                                    <option value="type">Luxury</option>
-                                    <option value="type">AC</option>
-                                    <option value="type">Non-AC</option>
+                                    <option value="type">Asvter Banquet Hall</option>
+                                    <option value="type">The Green Banquets</option>
+                                    <option value="type">KNIGHTSBRIDGE</option>
+                                    <option value="type">Hummingbird Hall</option>
 
 
                                 </select>
