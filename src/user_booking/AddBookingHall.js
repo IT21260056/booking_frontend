@@ -10,15 +10,14 @@ export default function AddBookingRoom() {
 
     const [user, setUser] = useState({
         name: "",
-        checkInDate: "",
-        checkOutDate: "",
-        type: "",
-        noOfPerson: "",
-        noOfRooms: "",
+        date:"",
+        time:"",
+        type:"",
+        participants:"",
 
     })
 
-    const {name, checkInDate, checkOutDate, type, noOfPerson, noOfRooms} = user
+   const {name,date,time,type,participants }=user
 
     const onInputChange = (e) => {
         setUser({...user, [e.target.name]: e.target.value})
@@ -27,7 +26,7 @@ export default function AddBookingRoom() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8080/user", user)
+        await axios.post("http://localhost:8080/user1", user)
         navigate("/")
 
     };
@@ -86,15 +85,29 @@ export default function AddBookingRoom() {
 
 
                             <div className="mb-3">
-                                <label htmlFor="CheckInDate" className="form-label">
-                                    Date & Time Required
+                                <label htmlFor="Date" className="form-label">
+                                    Date Required
                                 </label>
 
                                 <input
-                                    type={"datetime-local"}
+                                    type={"date"}
                                     className="form-control"
-                                    name="dateTime"
-                                    // value={checkInDate}
+                                    name="date"
+                                    value={date}
+                                    onChange={(e) => onInputChange(e)}
+                                />
+                            </div>
+
+                            <div className="mb-3">
+                                <label htmlFor="CheckInDate" className="form-label">
+                                    Time Required
+                                </label>
+
+                                <input
+                                    type={"time"}
+                                    className="form-control"
+                                    name="time"
+                                    value={time}
                                     onChange={(e) => onInputChange(e)}
                                 />
                             </div>
@@ -102,28 +115,28 @@ export default function AddBookingRoom() {
 
                             <div className="mb-3">
                                 <label htmlFor="type" className="form-label">
-                                    Hall type
+                                    Venue
                                 </label>
                                 <select name="type" onChange={(e) => onInputChange(e)}>
-                                    <option value="type">Asvter Banquet Hall</option>
-                                    <option value="type">The Green Banquets</option>
-                                    <option value="type">KNIGHTSBRIDGE</option>
-                                    <option value="type">Hummingbird Hall</option>
+                                    <option value={type}>Asvter Banquet Hall</option>
+                                    <option value={type}>The Green Banquets</option>
+                                    <option value={type}>KNIGHTSBRIDGE</option>
+                                    <option value={type}>Hummingbird Hall</option>
 
 
                                 </select>
                             </div>
 
                             <div className="mb-3">
-                                <label htmlFor="No of rooms" className="form-label">
-                                    Number of Parcitipants
+                                <label htmlFor="Par" className="form-label">
+                                    Number of Participants
                                 </label>
                                 <input
                                     type={"number"}
                                     className="form-control"
-                                    placeholder="Number of rooms"
-                                    name="noOfRooms"
-                                    value={noOfRooms}
+                                    placeholder="Parcitipants"
+                                    name="parcitipants"
+                                    value={participants}
                                     onChange={(e) => onInputChange(e)}
                                 />
                             </div>
@@ -131,7 +144,7 @@ export default function AddBookingRoom() {
                             <div className="btn1">
 
 
-                                <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/edituser">View room details</Link>
+                                <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/edituser">View Hall details</Link>
                                 <button id="button-2" type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
 
                             </div>

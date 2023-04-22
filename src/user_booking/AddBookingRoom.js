@@ -42,7 +42,7 @@ export default function AddBookingRoom() {
     return(
         <div className="container/fluid">
 
-        <div className="body1" >
+        <div className="body1=" >
 
             <h1 className="welcome">Welcome!!</h1>
             <div className="rectangle">
