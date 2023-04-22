@@ -134,8 +134,8 @@ export default function AddBookingRoom() {
                                 <input
                                     type={"number"}
                                     className="form-control"
-                                    placeholder="Parcitipants"
                                     name="parcitipants"
+                                    placeholder="No of Parcitipants"
                                     value={participants}
                                     onChange={(e) => onInputChange(e)}
                                 />
@@ -144,7 +144,7 @@ export default function AddBookingRoom() {
                             <div className="btn1">
 
 
-                                <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/edituser">View Hall details</Link>
+                                <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/">View Hall details</Link>
                                 <button id="button-2" type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
 
                             </div>
