@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './BookingRoom.css';
+// import './BookingRoom.css';
 import axios from "axios";
 import {Link, useNavigate} from "react-router-dom";
 
@@ -28,7 +28,7 @@ export default function AddBookingRoom() {
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.post("http://localhost:8080/user", user)
-        navigate("")
+        navigate("/")
 
     };
 
@@ -42,7 +42,9 @@ export default function AddBookingRoom() {
     return(
         <div className="container/fluid">
         {/*<div className="row">*/}
-        <div className="body1">
+        {/*    <img src="assert/images/room1_backgropund.jpg"/>*/}
+
+        <div className="body1" >
 
             <h1 className="welcome">Welcome!!</h1>
             <div className="rectangle">
@@ -56,6 +58,11 @@ export default function AddBookingRoom() {
         </div>
 
         <div className="body2">
+
+            <button id="button-room" type="Submit" className="btn btn-dark btn-outline-primary" to="/">Room</button>
+            <button id="button-hall" type="Submit" className="btn btn-dark btn-outline-primary" to="">Hall</button>
+
+
 
             <div className="container1">
 
