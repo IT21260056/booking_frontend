@@ -115,22 +115,8 @@ export default function AddBookingRoom() {
                             </div>
 
                             <div className="mb-3">
-                                <label htmlFor="No of adults" className="form-label">
-                                    Number of Adults
-                                </label>
-                                <input
-                                    type={"number"}
-                                    className="form-control"
-                                    placeholder="Number of person"
-                                    name="noOfPerson"
-                                    value={noOfPerson}
-                                    onChange={(e) => onInputChange(e)}
-                                />
-                            </div>
-
-                            <div className="mb-3">
                                 <label htmlFor="No of rooms" className="form-label">
-                                    Number of Rooms
+                                    Number of Parcitipants
                                 </label>
                                 <input
                                     type={"number"}
