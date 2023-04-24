@@ -7,11 +7,10 @@ export default function ViewBookingRoom() {
 
     const [user1, setUser] = useState({
         name: "",
-        // checkInDate: "",
-        // checkOutDate: "",
-        // type: "",
-        // noOfPerson: "",
-        // noOfRooms: "",
+        date: "",
+        time: "",
+        type: "",
+        participants: "",
     })
 
     const {id} = useParams();
@@ -26,10 +25,10 @@ export default function ViewBookingRoom() {
         setUser(result.data)
     }
 
-    // const deleteUser = async (id) => {
-    //     await axios.delete(`http://localhost:8080/user/${id}`)
-    //     loadUser()
-    // }
+    const deleteUser = async (id) => {
+        await axios.delete(`http://localhost:8080/user1/${id}`)
+        loadUser()
+    }
 
     // const deleteUser = async (id)=>{
     //     await axios.delete(`http://localhost:8080/user/${id}`)
@@ -44,57 +43,54 @@ export default function ViewBookingRoom() {
 
                     <div className="container3">
 
-                        {/*<div className="rec3">*/}
-                        {/*<div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">*/}
-                        {/*<h2 className="text-center m-4">Your Details</h2>*/}
+                        <div className="rec3">
+                        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
+                            <h2 className="text-center m-4">Your Details</h2>
+
 
                         <div className="card">
                             <div className="card-header">
 
-                                {/*<ul className="list-group list-group-flush">*/}
+                                <ul className="list-group list-group-flush">
                                 <li className="list-group-item">
                                     <b>Name:</b>
                                     {user1.name}
                                 </li>
 
-                                {/*<li className="list-group-item">*/}
-                                {/*    <b>Check In Date:</b>*/}
-                                {/*    {user.checkInDate}*/}
-                                {/*</li>*/}
+                                <li className="list-group-item">
+                                    <b>Required Date:</b>
+                                    {user1.date}
+                                </li>
 
-                                {/*<li className="list-group-item">*/}
-                                {/*    <b>Check Out Date:</b>*/}
-                                {/*    {user.checkOutDate}*/}
-                                {/*</li>*/}
+                                <li className="list-group-item">
+                                    <b>Time:</b>
+                                    {user1.time}
+                                </li>
 
-                                {/*<li className="list-group-item">*/}
-                                {/*    <b>Room Type:</b>*/}
-                                {/*    {user.type}*/}
-                                {/*</li>*/}
+                                <li className="list-group-item">
+                                    <b>Hall Type:</b>
+                                    {user1.type}
+                                </li>
 
-                                {/*<li className="list-group-item">*/}
-                                {/*    <b>No Of Person:</b>*/}
-                                {/*    {user.noOfPerson}*/}
-                                {/*</li>*/}
+                                <li className="list-group-item">
+                                    <b>Number of Participants:</b>
+                                    {user1.participants}
+                                </li>
 
-                                {/*<li className="list-group-item">*/}
-                                {/*    <b>No of Rooms:</b>*/}
-                                {/*    {user.noOfRooms}*/}
-                                {/*</li>*/}
-                                {/*</ul>*/}
+                                </ul>
                             </div>
                         </div>
 
 
-                        {/*</div>*/}
-                        {/*<Link id="change" className="btn btn-primary my-2" to={`/edituser/${user.id}`}>*/}
-                        {/*    Update Booking*/}
-                        {/*</Link>*/}
+                        </div>
+                        <Link id="change" className="btn btn-primary my-2" to={`/edituser/${user1.id}`}>
+                            Update Booking
+                        </Link>
 
-                        {/*<Link id="cancel" className="btn btn-primary my-2"*/}
-                        {/*      onClick={() => deleteUser(user.id)} to={"/"}>*/}
-                        {/*    Cancel*/}
-                        {/*</Link>*/}
+                        <Link id="cancel" className="btn btn-primary my-2"
+                              onClick={() => deleteUser(user1.id)} to={"/addhall"}>
+                            Cancel
+                        </Link>
 
                         <Link id="book" className="btn btn-primary my-2" to={""}>
                             Book Now
@@ -104,7 +100,7 @@ export default function ViewBookingRoom() {
                     </div>
                 </div>
             </div>
-            {/*</div>*/}
+            </div>
         </div>
 
 

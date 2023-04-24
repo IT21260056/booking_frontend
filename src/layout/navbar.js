@@ -19,16 +19,16 @@ export default function
                             Home
                         </a>
 
-                        <a className="navbar-brand" href="https://www.youtube.com/">
+                        <Link className="navbar-brand" to="/home_room">
                             Booking
-                        </a>
+                        </Link>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
 
                         </button>
-                        <Link className="btn btn-outline-light" to="/user_booking">AddBooking</Link>
+                        <Link className="btn btn-outline-light" to="/home_hall">AddBooking</Link>
 
                     </div>
                 </div>

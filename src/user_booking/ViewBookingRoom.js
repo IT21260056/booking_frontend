@@ -51,37 +51,37 @@ export default function ViewBookingRoom() {
                             <div className="card">
                                 <div className="card-header">
 
-                                    {/*<ul className="list-group list-group-flush">*/}
+                                    <ul className="list-group list-group-flush">
                                     <li className="list-group-item">
                                         <b>Name:</b>
                                         {user.name}
                                     </li>
 
-                                    {/*<li className="list-group-item">*/}
-                                    {/*    <b>Check In Date:</b>*/}
-                                    {/*    {user.checkInDate}*/}
-                                    {/*</li>*/}
+                                    <li className="list-group-item">
+                                        <b>Check In Date:</b>
+                                        {user.checkInDate}
+                                    </li>
 
-                                    {/*<li className="list-group-item">*/}
-                                    {/*    <b>Check Out Date:</b>*/}
-                                    {/*    {user.checkOutDate}*/}
-                                    {/*</li>*/}
+                                    <li className="list-group-item">
+                                        <b>Check Out Date:</b>
+                                        {user.checkOutDate}
+                                    </li>
 
-                                    {/*<li className="list-group-item">*/}
-                                    {/*    <b>Room Type:</b>*/}
-                                    {/*    {user.type}*/}
-                                    {/*</li>*/}
+                                    <li className="list-group-item">
+                                        <b>Room Type:</b>
+                                        {user.type}
+                                    </li>
 
-                                    {/*<li className="list-group-item">*/}
-                                    {/*    <b>No Of Person:</b>*/}
-                                    {/*    {user.noOfPerson}*/}
-                                    {/*</li>*/}
+                                    <li className="list-group-item">
+                                        <b>No Of Person:</b>
+                                        {user.noOfPerson}
+                                    </li>
 
-                                    {/*<li className="list-group-item">*/}
-                                    {/*    <b>No of Rooms:</b>*/}
-                                    {/*    {user.noOfRooms}*/}
-                                    {/*</li>*/}
-                                    {/*</ul>*/}
+                                    <li className="list-group-item">
+                                        <b>No of Rooms:</b>
+                                        {user.noOfRooms}
+                                    </li>
+                                    </ul>
                                 </div>
                             </div>
 
