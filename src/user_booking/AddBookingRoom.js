@@ -1,14 +1,35 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 // import './BookingRoom.css';
 import axios from "axios";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 
 
 export default function AddBookingRoom() {
 
+    // const [users, setUsers]=useState([])
+    // const {id} = useParams()
+
+
+    // useEffect(() => {
+    //     loadUsers();
+    //
+    // }, []);
+
+    // const loadUsers = async () => {
+    //     const result = await axios.get("http://127.0.0.1:8080/users");
+    //     setUsers(result.data);
+    // }
+
+    // const loadUsers = async()=>{
+    //     const result = await axios.get("http://127.0.0.1:8080/users");
+    //     setUsers(result.data);
+    // }
+
     let navigate = useNavigate()
 
     const [user, setUser] = useState({
+
+        id:"",
         name: "",
         checkInDate: "",
         checkOutDate: "",
@@ -25,12 +46,22 @@ export default function AddBookingRoom() {
 
     }
 
+    // const onSubmit = async (e) => {
+    //     e.preventDefault();
+    //     await axios.post("http://localhost:8080/user", user)
+    //     navigate("/viewuser/{user.id}");
+
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8080/user", user)
-        navigate("/")
+        const response = await axios.post("http://localhost:8080/user", user);
+        const userId = response.data.id;
+        navigate(`/viewuser/${userId}`);
 
-    };
+
+
+
+
+};
 
     // let selectedOption;
 
@@ -166,10 +197,15 @@ export default function AddBookingRoom() {
 
                 <div className="btn1">
 
-
-                    <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/edituser">View room details</Link>
+                    {/*<Link className="btn btn-success mx-2"*/}
+                    {/*      to={`/viewuser/${user.id}`} >View Booking</Link>*/}
+                    {/*<Link id="button-1" className="btn btn-dark btn-outline-primary" to="">View room details</Link>*/}
                     <button id="button-2" type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
 
+
+                    {/*<Link className="btn btn-success mx-2"*/}
+                    {/*      to={`/viewuser/${user.id}`}*/}
+                    {/*>View</Link>*/}
                 </div>
             </form>
 

@@ -22,6 +22,7 @@ loadUser()
 
     const loadUser=async ()=>{
         const result=await axios.get(`http://localhost:8080/user/${id}`)
+
         setUser(result.data)
     }
 
@@ -78,6 +79,10 @@ loadUser()
                             <Link className="btn btn-primary my-2" to={"/"}>
                                 Update booking details
                             </Link>
+
+                        <Link className="btn btn-primary my-2" to={"/"}>
+                            Back to Booking
+                        </Link>
                         </div>
                     </div>
                 </div>
