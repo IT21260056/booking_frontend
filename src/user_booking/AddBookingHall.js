@@ -69,7 +69,7 @@ export default function AddBookingRoom() {
                 <Link id="button-room" type="Submit" className="btn btn-dark btn-outline-primary" to="/">Room</Link>
                 <Link id="button-hall" type="Submit" className="btn btn-dark btn-outline-primary" to="/addhall">Hall</Link>
 
-                <h2>Available Halls</h2>
+                <h2>Halls</h2>
 
                 <div className="container1">
 
@@ -125,7 +125,7 @@ export default function AddBookingRoom() {
                                 <label htmlFor="type" className="form-label">
                                     Venue
                                 </label>
-                                <select name="type" onChange={(e) => onInputChange(e)}>
+                                <select name="type" id="t" onChange={(e) => onInputChange(e)}>
                                     <option value={type}>Asvter Banquet Hall</option>
                                     <option value={type}>The Green Banquets</option>
                                     <option value={type}>KNIGHTSBRIDGE</option>

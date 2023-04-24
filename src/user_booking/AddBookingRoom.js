@@ -66,9 +66,11 @@ export default function AddBookingRoom() {
 
 
     return(
+
         <div className="container/fluid">
 
-        <div className="body1=" >
+
+            <div className="body1" >
 
             <h1 className="welcome">Welcome!!</h1>
             <div className="rectangle">
@@ -79,14 +81,15 @@ export default function AddBookingRoom() {
                     our guest soon!
                 </div>
             </div>
-        </div>
+            </div>
+
 
         <div className="body2">
 
             <Link id="button-room" type="Submit" className="btn btn-dark btn-outline-primary" to="/">Room</Link>
             <Link id="button-hall" type="Submit" className="btn btn-dark btn-outline-primary" to="/addhall">Hall</Link>
 
-            <h2>Available Rooms</h2>
+            <h2>Rooms</h2>
 
             {/*<div className="container-des">*/}
             {/*    <div className="rec-r-1"></div>*/}
@@ -153,7 +156,7 @@ export default function AddBookingRoom() {
                             <label htmlFor="type" className="form-label">
                                 Room type
                             </label>
-                            <select name="type" onChange={(e) => onInputChange(e)}>
+                            <select name="type" id="t" onChange={(e) => onInputChange(e)}>
                                 <option value="type">Luxury</option>
                                 <option value="type">AC</option>
                                 <option value="type">Non-AC</option>
@@ -192,15 +195,9 @@ export default function AddBookingRoom() {
 
                 <div className="btn1">
 
-                    {/*<Link className="btn btn-success mx-2"*/}
-                    {/*      to={`/viewuser/${user.id}`} >View Booking</Link>*/}
                     <Link id="button-1" className="btn btn-dark btn-outline-primary" to="">View room details</Link>
-                    <button id="button-2" type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
+                    <button id="button-2" type="Submit" className="btn btn-secondary btn-outline-primary">Go to order page</button>
 
-
-                    {/*<Link className="btn btn-success mx-2"*/}
-                    {/*      to={`/viewuser/${user.id}`}*/}
-                    {/*>View</Link>*/}
                 </div>
             </form>
 

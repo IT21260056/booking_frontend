@@ -1,6 +1,6 @@
 
 .body1{
-    background: url(/assert/images/room1_backgropund.jpg);
+    background: url(/assert/images/room1_background.jpg);
     background-size: 100%;
     height: fit-content;
     width: fit-content;
@@ -36,6 +36,7 @@
 
 .welcome{
 
+    margin-top: 2%;
     font-size: 90px;
     color:white;
     text-shadow: 4px 4px  rgb(0, 0, 0);
@@ -47,14 +48,11 @@
     display: flex;
     width: 90%;
     height: 100%;
-    /*background-position: center;*/
     align-content: center;
-    /*border: 1px solid black;*/
-    /*padding-left: 0.5%;*/
-    /*padding-right: 0.5%;*/
     padding-top: 0.7%;
     padding-bottom: 0.7%;
-    /*align-items: center;*/
+    margin-left:4%;
+    margin-bottom: 1%;
     border-radius: 10px;
     background:#000000;
     opacity: 0.8;
@@ -98,7 +96,6 @@
 
     display: flex;
     justify-content: center; /* Horizontally center the container */
-    /*align-items: center; !* Vertically center the container *!*/
     height: 100%;
     padding-top: 5%;
 
@@ -109,7 +106,6 @@
     margin-top: 1%;
     width: 6%;
     color: white;
-    /*background-color:lightgray;*/
     --bs-btn-hover-bg: #555353;
 
 }
@@ -119,7 +115,6 @@
     margin-top: 1%;
     width: 6%;
     color: white;
-    /*background-color:lightgray;*/
     --bs-btn-hover-bg: #555353;
 }
 
@@ -127,7 +122,6 @@
 
     display: flex;
     justify-content: center; /* Horizontally center the container */
-    /*align-items: center; !* Vertically center the container *!*/
     height: 100%;
     margin-top: 5%;
 
@@ -141,34 +135,20 @@
 }
 
 .rec2{
-    /*width: 50%;*/
-    /*height: 100%;*/
-    /*!*background-position: center;*!*/
-    /*!*align-content: center;*!*/
-    /*!*border: 1px solid black;*!*/
     padding-left: 1%;
-    /*padding-right: 1%;*/
     padding-top: 3%;
-    /*padding-bottom: 0.7%;*/
-    /*!*align-items: center;*!*/
-    /*border-radius: 10px;*/
-    /*background:#1e323f;*/
-    /*opacity: 0.8;*/
-    /*justify-content: center;*/
     width: 30%;
     height: 100%;
     background-color: #1e323f;
-    /*margin: 0 auto;*/
     opacity: 0.8;
     border-radius: 10px;
 }
 
 .mb-3{
     color: white;
-    width: 80%;
+    width: 87%;
     align-content: center;
-    padding-left: 13%;
-    /*justify-content: center;*/
+    padding-left: 10%;
 }
 
 .dropDown{
@@ -178,18 +158,14 @@
     justify-content: center;
     align-content: center;
 }
+#t{
+    width: 100%;
+    border-radius: 4px;
+}
 
 .btn1{
-    padding-top: 7%;
+    padding-top: 5%;
     padding-left: 1%;
-    /*padding-bottom: 20%;*/
-    /*width: 9%;*/
-
-
-}
-.btn{
-    color: white;
-    font-size: 18px;
 }
 
 
@@ -206,12 +182,15 @@
 }
 
 #button-1{
-    margin-right: 5%;
-    margin-left: -5%;
-}
-#button-2{
     background-color: yellow;
     color: black;
+    margin-right: 5%;
+    margin-left: -5%;
+
+}
+#button-2{
+    background-color: darkblue;
+    color: white;
 }
 
 
@@ -219,7 +198,23 @@
     margin-bottom: 5%;
 }
 
+
+
+
+
+
+
+
 /*ViewBookingRoomCSS*/
+
+.containerView{
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    /*align-items: center; !* Vertically center the container *!*/
+    height: 100%;
+    padding-top: 5%;
+
+}
 
 .container3{
     display:flex;
