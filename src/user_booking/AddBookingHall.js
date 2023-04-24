@@ -8,7 +8,7 @@ export default function AddBookingRoom() {
 
     let navigate = useNavigate()
 
-    const [user, setUser] = useState({
+    const [user1, setUser] = useState({
         name: "",
         date:"",
         time:"",
@@ -17,18 +17,26 @@ export default function AddBookingRoom() {
 
     })
 
-   const {name,date,time,type,participants }=user
+   const {name,date,time,type,participants }=user1
 
     const onInputChange = (e) => {
-        setUser({...user, [e.target.name]: e.target.value})
+        setUser({...user1, [e.target.name]: e.target.value})
 
     }
 
+    // const onSubmit = async (e) => {
+    //     e.preventDefault();
+    //     await axios.post("http://localhost:8080/user1", user)
+    //     navigate("")
+    //
+    // };
+
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8080/user1", user)
-        navigate("/")
-
+        const response = await axios.post("http://localhost:8080/user1", user1);
+        const userId1 = response.data.id;
+        // navigate(`/viewhall/${userId1}`);
+        navigate(`/viewhall/${userId1}`);
     };
 
     // let selectedOption;

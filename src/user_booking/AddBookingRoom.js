@@ -56,11 +56,6 @@ export default function AddBookingRoom() {
         const response = await axios.post("http://localhost:8080/user", user);
         const userId = response.data.id;
         navigate(`/viewuser/${userId}`);
-
-
-
-
-
 };
 
     // let selectedOption;
@@ -199,7 +194,7 @@ export default function AddBookingRoom() {
 
                     {/*<Link className="btn btn-success mx-2"*/}
                     {/*      to={`/viewuser/${user.id}`} >View Booking</Link>*/}
-                    {/*<Link id="button-1" className="btn btn-dark btn-outline-primary" to="">View room details</Link>*/}
+                    <Link id="button-1" className="btn btn-dark btn-outline-primary" to="">View room details</Link>
                     <button id="button-2" type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
 
 

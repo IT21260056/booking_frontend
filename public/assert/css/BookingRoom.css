@@ -255,3 +255,30 @@
     justify-content: center;
     margin-left: 5%;
 }
+
+.containerView{
+
+}
+
+/*.viewButtons{*/
+/*    !*margin-top: 10%;*!*/
+/*}*/
+
+#change{
+    background-color: darkgreen;
+    height: 10%;
+    margin-left: 10%;
+}
+
+#cancel{
+    background-color: red;
+    width: 10%;
+    height: 10%;
+    margin-left: 2%;
+}
+
+#book{
+    background-color: blue;
+    height: 10%;
+    margin-left: 2%;
+}

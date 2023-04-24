@@ -32,10 +32,18 @@ export default function EditBookingRoom() {
         loadUser();
     },[]);
 
+    // const onSubmit = async (e) => {
+    //     e.preventDefault();
+    //     await axios.put(`http://localhost:8080/user/${id}`, user);
+    //     navigate("");
+    //
+    // };
+
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.put(`http://localhost:8080/user/${id}`, user);
-        navigate("");
+        const response = await axios.post("http://localhost:8080/user", user);
+        const userId = response.data.id;
+        navigate(`/viewuser/${userId}`);
 
     };
 
@@ -53,19 +61,19 @@ export default function EditBookingRoom() {
 
 
     return <div className="container/fluid">
-        {/*<div className="row">*/}
-        <div className="body1">
+        {/*/!*<div className="row">*!/*/}
+        {/*<div className="body1">*/}
 
-            <h1 className="welcome">Welcome!!</h1>
-            <div className="rectangle">
+        {/*    <h1 className="welcome">Welcome!!</h1>*/}
+        {/*    <div className="rectangle">*/}
 
-                <div className="text">We can assist you if you need to reserve a space for an upcoming event or
-                    arrange your stay with us. You will have a quick and simple booking experience with our system
-                    since it is user-friendly. We appreciate you giving us some thought, and we hope to have you as
-                    our guest soon!
-                </div>
-            </div>
-        </div>
+        {/*        <div className="text">We can assist you if you need to reserve a space for an upcoming event or*/}
+        {/*            arrange your stay with us. You will have a quick and simple booking experience with our system*/}
+        {/*            since it is user-friendly. We appreciate you giving us some thought, and we hope to have you as*/}
+        {/*            our guest soon!*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</div>*/}
 
         <div className="body2">
 
@@ -163,13 +171,11 @@ export default function EditBookingRoom() {
                             />
                         </div>
 
-                        <div className="btn1">
-
-                            <Link className="btn btn-dark btn-outline-primary" to="/">xxx</Link>
-                            <button type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
+                            {/*<Link className="btn btn-dark btn-outline-primary" to="/">xxx</Link>*/}
+                            <button type="Submit" className="btn btn-primary">Update & View</button>
 
 
-                        </div>
+
                     </form>
 
                 </div>
