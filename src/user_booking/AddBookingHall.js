@@ -128,14 +128,14 @@ export default function AddBookingRoom() {
                             </div>
 
                             <div className="mb-3">
-                                <label htmlFor="Par" className="form-label">
-                                    Number of Participants
+                                <label htmlFor="No of adults" className="form-label">
+                                    Number of Adults
                                 </label>
                                 <input
                                     type={"number"}
                                     className="form-control"
-                                    name="parcitipants"
-                                    placeholder="No of Parcitipants"
+                                    placeholder="Number of person"
+                                    name="participants"
                                     value={participants}
                                     onChange={(e) => onInputChange(e)}
                                 />
@@ -144,7 +144,7 @@ export default function AddBookingRoom() {
                             <div className="btn1">
 
 
-                                <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/">View Hall details</Link>
+                                <Link id="button-1" className="btn btn-dark btn-outline-primary" to="">View Hall details</Link>
                                 <button id="button-2" type="Submit" className="btn btn-secondary btn-outline-success">Go to order page</button>
 
                             </div>
