@@ -83,7 +83,7 @@ export default function ViewBookingRoom() {
 
 
                         </div>
-                        <Link id="change" className="btn btn-primary my-2" to={`/edituser/${user1.id}`}>
+                        <Link id="change" className="btn btn-primary my-2" to={`/edithall/${user1.id}`}>
                             Update Booking
                         </Link>
 

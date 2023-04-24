@@ -11,6 +11,7 @@ import EditBookingRoom from "./user_booking/EditBookingRoom";
 import ViewBookingRoom from "./user_booking/ViewBookingRoom";
 import ViewBookingHall from "./user_booking/ViewBookingHall"
 import HomeHall from "./pages/Hoom_hall"
+import EditBookingHall from "./user_booking/EditBookingHall";
 
 
 
@@ -25,6 +26,7 @@ function App() {
                     <Route exact path="/home_room" element={<Home/>}/>
                     {/*<Route exact path="/user_booking" element={<AddBookingRoom/>}/>*/}
                     <Route exact path="/edituser/:id" element={<EditBookingRoom/>}/>
+                    <Route exact path="/edithall/:id" element={<EditBookingHall/>}/>
                     <Route exact path="/viewuser/:id" element={<ViewBookingRoom/>}/>
                     <Route exact path="/viewhall/:id" element={<ViewBookingHall/>}/>
                     <Route exact path="/home_hall" element={<HomeHall/>}/>

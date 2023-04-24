@@ -99,16 +99,16 @@ export default function EditBookingRoom() {
 
 
                         <div className="mb-3">
-                            <label htmlFor="CheckInDate" className="form-label">
+                            <label htmlFor="checkInDate" className="form-label">
                                 Check In date
                             </label>
 
                             <input
                                 type={"date"}
                                 className="form-control"
-                                // placeholder="Check in date"
+                                // placeholder="Check out date"
                                 name="checkInDate"
-                                // value={checkInDate}
+                                value={checkInDate}
                                 onChange={(e) => onInputChange(e)}
                             />
                         </div>

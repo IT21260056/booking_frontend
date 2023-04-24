@@ -33,7 +33,7 @@ export default function HomeHall() {
                         <th scope="col">Name</th>
                         <th scope="col">Required Date</th>
                         <th scope="col">Time</th>
-                        <th scope="col">Room type</th>
+                        <th scope="col">Hall type</th>
                         <th scope="col">Number of participants</th>
 
                     </tr>
@@ -60,7 +60,7 @@ export default function HomeHall() {
                                     >View</Link>
 
                                     <Link className="btn btn-primary mx-2"
-                                          to={`/edituser/${user1.id}`}
+                                          to={`/edithall/${user1.id}`}
                                     >Edit</Link>
 
                                     <button className="btn btn-danger mx-2"
